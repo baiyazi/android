@@ -1,0 +1,10 @@
+ext{
+    config_android=[
+            compileSdkVersion: 30,
+            buildToolsVersion : "30.0.2",
+            minSdkVersion : 16,
+            targetSdkVersion : 30,
+            JavaVersion : JavaVersion.VERSION_1_8
+    ]
+    is_release = true
+}

@@ -1,0 +1,20 @@
+plugins {
+    id 'java-library'
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', includes: ['*.jar'])
+    // 编译时期进行注解处理
+    implementation 'com.google.auto.service:auto-service:1.0-rc6'
+    annotationProcessor 'com.google.auto.service:auto-service:1.0-rc6'
+    // 帮助我们通过类调用的方式来生成Java代码[JavaPoet]
+    implementation 'com.squareup:javapoet:1.10.0'
+    // 依赖于注解
+    implementation project(':annotation')
+
+}
+
+java {
+    sourceCompatibility = config_android.JavaVersion
+    targetCompatibility = config_android.JavaVersion
+}
